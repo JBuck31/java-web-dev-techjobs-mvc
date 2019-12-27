@@ -7,6 +7,7 @@ import org.launchcode.javawebdevtechjobsmvc.NameSorter;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -227,5 +228,11 @@ public class JobData {
         return allCoreCompetency;
     }
 
+    public static Object getAll() {
+        loadData();
+        allJobs.sort(new NameSorter());
+        return allJobs;
+
+    }
 }
 
