@@ -24,6 +24,7 @@ public class SearchController {
     }
 
     // TODO #3 - Create a handler to process a search request and render the updated search view.
+//   ANY AND ALL OF THIS CAN BE CHANGED! Go back and read/re-watch the chapter!
     @RequestMapping(value = "results")
     public ArrayList<Job> displaySearchResults(@RequestParam String searchType, String searchTerm, Model model) {
         model.addAttribute("searchType", searchType);
