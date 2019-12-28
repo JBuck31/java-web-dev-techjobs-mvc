@@ -10,15 +10,36 @@
 
     <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
 
-    <!-- TODO #1 - Use a loop to display job results in a table. Needs to be reformatted. Still working on this... -->
-
-    <table class="table table-striped">
-        <tbody>
-            <tr th:each="job : ${jobs}">
-                    <th th:text = "${job}"></th>
-            </tr>
-        </tbody>
-    </table>
+    <!-- Used a loop to display job results in a table.-->
+    <div th:each="job : ${jobs}">
+        <table style="width:50%" class="table table-striped" frame="box">
+                <tr class="row">
+                    <td> <b>ID</b></td>
+                    <td th:text = "${job.getId()}"></td>
+                </tr>
+                <tr class="row">
+                    <td> <b>Name</b></td>
+                    <td th:text = "${job.getName()}"></td>
+                </tr>
+                <tr class="row">
+                    <td> <b>Employer</b></td>
+                    <td th:text = "${job.getEmployer()}"></td>
+                </tr>
+                <tr class="row">
+                    <td> <b>Location</b></td>
+                    <td th:text = "${job.getLocation()}"></td>
+                </tr>
+                <tr class="row">
+                    <td> <b>Position Type</b></td>
+                    <td th:text = "${job.getPositionType()}"></td>
+                </tr>
+                <tr class="row">
+                    <td> <b>Skill</b></td>
+                    <td th:text = "${job.getCoreCompetency()}"></td>
+                </tr>
+        </table>
+        <br>
+    </div>
 </div>
 
 </body>
